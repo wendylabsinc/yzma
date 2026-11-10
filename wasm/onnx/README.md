@@ -19,6 +19,10 @@ await policy.dispose()
 
 ## Model contracts
 
+### Python in the browser
+
+`@wendy/yzma-browser/python` exports `installPythonInference(pyodide, {detector, bitmap, policy})`. Initialize the desired model in the same worker, then install this bridge before calling `pyodide.runPythonAsync`. Python can import `detect`, `predict`, `reset`, and `step` from `wendy_inference`. `await detect(threshold=0.25)` runs YOLO on the supplied bitmap and returns detections in original image pixels. `await predict(observation)` runs the trained PPO network and returns its action and probabilities. `reset(seed)` and `step(observation, action)` use the same CartPole simulator as JavaScript. The host supplies Pyodide and must terminate the worker to stop unbounded Python code. A run is limited to 10 detector calls and 10,000 policy calls. This bridge performs inference; it does not install PyTorch or train PPO in the browser.
+
 YOLO11n takes RGB floats in `[1,3,640,640]`, scaled to 0–1. The image is resized with its aspect ratio preserved and padded with 114. Output `[1,84,8400]` contains center coordinates, dimensions and 80 COCO scores. The decoder applies class-aware nonmaximum suppression and returns `xyxy` coordinates in the original image. It supports this detector export, not arbitrary YOLO output formats.
 
 The PPO actor takes `[x, x_velocity, angle_radians, angular_velocity]` as `[1,4]` float32 and returns two logits. Argmax selects action 0 for left or 1 for right. The simulator uses CartPole-v1's Euler integration at 0.02 seconds per step, termination at 2.4 metres or 12 degrees, and reward 1 per step. The caller must truncate at 500 steps. The seeded browser reset generator differs from Gymnasium's, so numerical seed values do not reproduce Gymnasium starts. Paired policies use identical browser starts.
