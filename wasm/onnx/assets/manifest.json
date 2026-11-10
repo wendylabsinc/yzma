@@ -1,0 +1,105 @@
+{
+  "seed": 7,
+  "requested_timesteps": 50000,
+  "actual_timesteps": 51200,
+  "evaluation_seeds": [
+    1000,
+    1001,
+    1002,
+    1003,
+    1004,
+    1005,
+    1006,
+    1007,
+    1008,
+    1009,
+    1010,
+    1011,
+    1012,
+    1013,
+    1014,
+    1015,
+    1016,
+    1017,
+    1018,
+    1019
+  ],
+  "returns": {
+    "trained": [
+      500.0,
+      500.0,
+      500.0,
+      500.0,
+      500.0,
+      500.0,
+      500.0,
+      500.0,
+      500.0,
+      500.0,
+      500.0,
+      500.0,
+      500.0,
+      500.0,
+      500.0,
+      500.0,
+      500.0,
+      500.0,
+      500.0,
+      500.0
+    ],
+    "random": [
+      38.0,
+      15.0,
+      25.0,
+      19.0,
+      18.0,
+      29.0,
+      22.0,
+      26.0,
+      16.0,
+      22.0,
+      19.0,
+      13.0,
+      36.0,
+      25.0,
+      28.0,
+      19.0,
+      17.0,
+      17.0,
+      14.0,
+      10.0
+    ]
+  },
+  "mean_returns": {
+    "trained": 500.0,
+    "random": 21.4
+  },
+  "policy_export_parity_observations": 100,
+  "versions": {
+    "torch": "2.15.0",
+    "stable-baselines3": "2.9.2",
+    "gymnasium": "1.4.0",
+    "onnx": "1.20.1",
+    "onnxruntime": "1.26.0",
+    "ultralytics": "8.4.208"
+  },
+  "build_seconds": 17.0,
+  "files": {
+    "cartpole-ppo.zip": {
+      "sha256": "8e30a94417adef1fb67ba679489d42872bbbf77c06c0b03b97e0b9a50456739b",
+      "bytes": 141155
+    },
+    "yolo11n.onnx": {
+      "sha256": "5c9413c9c02e2b3d0aee9b266c8956565dc08d2a2e9985b629109ef23f2fd745",
+      "bytes": 10701974
+    },
+    "cartpole-ppo.onnx": {
+      "sha256": "a82061761ee4c507d7f6178732fde873e2666dcdc268e6937ccb31a1c8cef5cd",
+      "bytes": 19911
+    },
+    "bus.jpg": {
+      "sha256": "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63",
+      "bytes": 137419
+    }
+  }
+}

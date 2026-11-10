@@ -1,0 +1,10 @@
+{
+  "name": "@wendy/yzma-browser",
+  "version": "0.1.0",
+  "description": "Wendy's yzma fork with browser ONNX inference for YOLO and CartPole policies",
+  "license": "Apache-2.0",
+  "exports": {".": "./wasm/onnx/runtime.mjs"},
+  "files": ["wasm/onnx", "LICENSE"],
+  "scripts": {"test": "node --test wasm/onnx/runtime.test.mjs"},
+  "devDependencies": {"onnxruntime-web": "1.31.1"}
+}

@@ -2,6 +2,8 @@
 
 # yzma - Go with your own intelligence
 
+This is Wendy's fork. It adds [browser ONNX inference for YOLO and trained RL policies](wasm/onnx/README.md) alongside the upstream llama.cpp runtime.
+
 [![Go Reference](https://pkg.go.dev/badge/github.com/hybridgroup/yzma.svg)](https://pkg.go.dev/github.com/hybridgroup/yzma) [![Linux](https://github.com/hybridgroup/yzma/actions/workflows/linux.yml/badge.svg)](https://github.com/hybridgroup/yzma/actions/workflows/linux.yml) [![macOS](https://github.com/hybridgroup/yzma/actions/workflows/macos.yml/badge.svg)](https://github.com/hybridgroup/yzma/actions/workflows/macos.yml) [![Windows](https://github.com/hybridgroup/yzma/actions/workflows/windows.yml/badge.svg)](https://github.com/hybridgroup/yzma/actions/workflows/windows.yml) [![WASM](https://github.com/hybridgroup/yzma/actions/workflows/wasm.yml/badge.svg)](https://github.com/hybridgroup/yzma/actions/workflows/wasm.yml) [![GitHub Release](https://img.shields.io/github/v/release/hybridgroup/llama-cpp-builder?logo=github&logoColor=lightgray&label=llama.cpp)](https://github.com/hybridgroup/llama-cpp-builder/releases) [![Bluesky](https://img.shields.io/badge/bluesky-follow-blue?style=flat&logo=bluesky&logoColor=lightgrey)](https://bsky.app/profile/yzma.ai) [![Mastodon](https://img.shields.io/badge/mastodon-follow-blue?style=flat&logo=mastodon&logoColor=lightgrey)](https://mastodon.social/@yzma_ai)
 
 `yzma` lets you write Go applications that directly integrate [`llama.cpp`](https://github.com/ggml-org/llama.cpp) for fully local inference using hardware acceleration.
